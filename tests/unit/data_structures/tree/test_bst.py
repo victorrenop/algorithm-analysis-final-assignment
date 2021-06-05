@@ -4,10 +4,12 @@ import pytest
 
 
 class TestBinarySearchTree:
+    def prepare_tree(self):
+        return BinarySearchTree(), [15, 7, 25, 5, 10, 3, 4]
+
     def test_insert(self):
         # prepare
-        tree = BinarySearchTree()
-        nodes_to_insert = [15, 7, 25, 5, 10, 3, 4]
+        tree, nodes_to_insert = self.prepare_tree()
 
         # act
         for idx, node in enumerate(nodes_to_insert):
@@ -32,8 +34,7 @@ class TestBinarySearchTree:
     )
     def test_search_key(self, key, expected_item):
         # prepare
-        tree = BinarySearchTree()
-        nodes_to_insert = [15, 7, 25, 5, 10, 3, 4]
+        tree, nodes_to_insert = self.prepare_tree()
 
         # act
         for idx, node in enumerate(nodes_to_insert):
@@ -53,8 +54,7 @@ class TestBinarySearchTree:
     )
     def test_search_val(self, val, expected_item):
         # prepare
-        tree = BinarySearchTree()
-        nodes_to_insert = [15, 7, 25, 5, 10, 3, 4]
+        tree, nodes_to_insert = self.prepare_tree()
 
         # act
         for idx, node in enumerate(nodes_to_insert):
@@ -66,8 +66,7 @@ class TestBinarySearchTree:
 
     def test_get_height(self):
         # prepare
-        tree = BinarySearchTree()
-        nodes_to_insert = [15, 7, 25, 5, 10, 3, 4]
+        tree, nodes_to_insert = self.prepare_tree()
         expected_height = 4
 
         # act
@@ -80,8 +79,7 @@ class TestBinarySearchTree:
 
     def test_traverse_in_order(self):
         # prepare
-        tree = BinarySearchTree()
-        nodes_to_insert = [15, 7, 25, 5, 10, 3, 4]
+        tree, nodes_to_insert = self.prepare_tree()
         expected_nodes = sorted(
             [Item(key=idx, val=val) for idx, val in enumerate(nodes_to_insert)],
             key=lambda x: x.val,
@@ -97,8 +95,7 @@ class TestBinarySearchTree:
 
     def test_traverse_pre_order(self):
         # prepare
-        tree = BinarySearchTree()
-        nodes_to_insert = [15, 7, 25, 5, 10, 3, 4]
+        tree, nodes_to_insert = self.prepare_tree()
         expected_nodes = [
             Item(key=0, val=15),
             Item(key=1, val=7),
@@ -120,8 +117,7 @@ class TestBinarySearchTree:
 
     def test_traverse_post_order(self):
         # prepare
-        tree = BinarySearchTree()
-        nodes_to_insert = [15, 7, 25, 5, 10, 3, 4]
+        tree, nodes_to_insert = self.prepare_tree()
         expected_nodes = [
             Item(key=1, val=7),
             Item(key=3, val=5),

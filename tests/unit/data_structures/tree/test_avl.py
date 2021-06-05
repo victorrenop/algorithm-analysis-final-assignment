@@ -120,7 +120,6 @@ class TestAVLTree:
         for idx, node in enumerate(nodes_to_insert):
             tree.root = tree.insert(key=idx, val=node, current_root=tree.root)
         actual_nodes = list(tree.traverse_pre_order(tree.root))
-        print(actual_nodes)
 
         # assert
         assert actual_nodes == expected_nodes

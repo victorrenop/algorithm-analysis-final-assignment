@@ -35,7 +35,7 @@ class TestLinkedHash:
             ("division", 33, Item(33, 1)),
             ("division", 5, Item(5, 1)),
             ("division", 999, None),
-        ]
+        ],
     )
     def test_search(self, hash_function, key, expected_result):
         # prepare

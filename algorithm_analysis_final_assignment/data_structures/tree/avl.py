@@ -16,7 +16,7 @@ class AVLTree(Tree):
         self.root = None
 
     def insert(self, key: object, val: int, current_root: AVLNode = None) -> None:
-        if current_root != None:
+        if current_root is not None:
             if val > current_root.item.val:
                 current_root.right = self.insert(key, val, current_root.right)
             else:
@@ -88,17 +88,17 @@ class AVLTree(Tree):
         return right_depth + 1
 
     def _get_node_height(self, node: AVLNode) -> int:
-        if node == None:
+        if node is None:
             return 0
         return node.height
 
     def _get_balancing_factor(self, node: AVLNode) -> int:
-        if node == None:
+        if node is None:
             return 0
         return abs(self._get_node_height(node.left) - self._get_node_height(node.right))
 
     def _get_int_balancing_factor(self, node: AVLNode) -> int:
-        if node == None:
+        if node is None:
             return 0
         return self._get_node_height(node.left) - self._get_node_height(node.right)
 

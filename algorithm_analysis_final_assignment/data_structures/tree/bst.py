@@ -1,5 +1,5 @@
 from algorithm_analysis_final_assignment.data_structures.tree.tree import Tree
-from algorithm_analysis_final_assignment.data_structures.tree.item import Item
+from algorithm_analysis_final_assignment.data_structures.item import Item
 from dataclasses import dataclass
 
 

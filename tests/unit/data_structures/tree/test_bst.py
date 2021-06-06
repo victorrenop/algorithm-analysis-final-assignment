@@ -1,5 +1,5 @@
 from algorithm_analysis_final_assignment.data_structures.tree import BinarySearchTree
-from algorithm_analysis_final_assignment.data_structures.tree import Item
+from algorithm_analysis_final_assignment.data_structures import Item
 import pytest
 
 

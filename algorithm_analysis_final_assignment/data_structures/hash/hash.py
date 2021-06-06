@@ -11,6 +11,6 @@ class Hash(metaclass=ABCMeta):
     def search(self, key: object) -> Item:
         pass
 
-    # @abstractmethod
-    # def hash_function(self, key: object) -> int:
-    #     pass
+    @abstractmethod
+    def hash_function(self, key: object) -> int:
+        pass

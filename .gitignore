@@ -1,6 +1,10 @@
 # OS Stuff
 .DS_Store
 
+# Local Input/Output
+output/
+datasets/
+
 # Byte/Extensions
 __pycache__/
 *.py[cod]
